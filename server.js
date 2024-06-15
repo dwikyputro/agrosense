@@ -5,7 +5,7 @@ const databaseConfig = require("./config/database");
 const init = async () => {
   const server = Hapi.server({
     port: 3000,
-    host: "localhost", // Ensure the server listens on all network interfaces
+    host: "0.0.0.0", // Ensure the server listens on all network interfaces
   });
 
   await server.register(require("@hapi/basic"));
